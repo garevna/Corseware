@@ -1,2 +1,0 @@
-# Corseware
-Constructor
