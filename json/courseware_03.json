@@ -63,11 +63,23 @@
     {
       "type": "findError",
       "centralPicture": "https://drive.google.com/uc?export=download&id=0BxaMB69y7fvSbGdmVWxJX3JOYlE",
-      "question": "Найти и исправить ошибки в коде",
-      "wrongContent": "var collection = document.getElementsByClassName('myClass'); \rfor (var j = 0; j < collection.width; j++) { \r\tcollection[j].color = 'red'; \r}",
-      "rightContent": "var collection = document.getElementsByClassName('myClass'); \rfor (var j = 0; j < collection.length; j++) { \r\tcollection[j].style.color = 'red'; \r}",
-      "contentCols": 100,
-      "contentRows": 5,
+      "question": "Найти и исправить ошибки в коде конструктора",
+      "wrongContent": [
+          "var Figure = function () {",
+          "    id: 'circle'",
+          "    changeId: function ( newId ) {",
+          "         this.id = newId",
+          "    }",
+          "}"
+      ],
+      "rightContent": [
+          "var Figure = function () {",
+          "    this.id = 'circle'",
+          "    this.changeId = function ( newId ) {",
+          "         this.id = newId",
+          "    }",
+          "}"
+      ],
       "balls": 10,
       "rightInputPicture": {
         "url": "images/victory-1.gif",
