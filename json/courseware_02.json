@@ -109,7 +109,7 @@
         "width": "80px"
       },
       "wrongChoicePicture": {
-        "url": "images/explosion.gif",
+        "url": "images/emotion-06.png",
         "width": "80px"
       }
     },
@@ -124,7 +124,7 @@
       "rightInput": "[]",
       "balls": 1,
       "rightInputPicture": {
-        "url": "images/victory_transparent.gif",
+        "url": "images/emotion-12.png",
         "width": "300px"
       },
       "wrongInputPicture": {
@@ -173,11 +173,11 @@
         "width": "100px"
       },
       "rightChoicePicture": {
-        "url": "images/smile-01.gif",
+        "url": "images/smile-07.png",
         "width": "80px"
       },
       "wrongChoicePicture": {
-        "url": "images/explosion.gif",
+        "url": "images/smile-06.png",
         "width": "80px"
       }
     },
@@ -211,11 +211,11 @@
       "rightInput": "innerHTML",
       "balls": 3,
       "rightInputPicture": {
-        "url": "images/victory_transparent.gif",
+        "url": "images/smile-07.png",
         "width": "300px"
       },
       "wrongInputPicture": {
-        "url": "images/explosion.gif",
+        "url": "images/smile-06.png",
         "width": "100px"
       }
     },
@@ -245,11 +245,11 @@
         "width": "100px"
       },
       "rightChoicePicture": {
-        "url": "images/smile-01.gif",
+        "url": "images/emotion-12.png",
         "width": "80px"
       },
       "wrongChoicePicture": {
-        "url": "images/explosion.gif",
+        "url": "images/emotion-06.png",
         "width": "80px"
       }
     },
@@ -281,11 +281,11 @@
         "width": "100px"
       },
       "rightChoicePicture": {
-        "url": "images/smile-01.gif",
+        "url": "images/emotion-12.png",
         "width": "80px"
       },
       "wrongChoicePicture": {
-        "url": "images/explosion.gif",
+        "url": "images/emotion-06.png",
         "width": "80px"
       }
     },
@@ -314,11 +314,11 @@
         "width": "100px"
       },
       "rightChoicePicture": {
-        "url": "images/victory-1.gif",
+        "url": "images/smile-07.png",
         "width": "80px"
       },
       "wrongChoicePicture": {
-        "url": "images/explosion.gif",
+        "url": "images/smile-06.png",
         "width": "80px"
       }
     },
@@ -332,7 +332,7 @@
       "contentRows": 7,
       "balls": 8,
       "rightInputPicture": {
-        "url": "images/victory_transparent.gif",
+        "url": "images/emotion-12.png",
         "width": "300px"
       },
       "wrongInputPicture": {
