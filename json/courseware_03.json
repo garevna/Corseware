@@ -148,8 +148,22 @@
       "type": "findError",
       "centralPicture": "https://drive.google.com/uc?export=download&id=0BxaMB69y7fvSbGdmVWxJX3JOYlE",
       "question": "Найти и исправить ошибки в коде",
-      "wrongContent": "var x == 5;\rvar y != 7;\rvar document.z = {};",
-      "rightContent": "var x = 5;\rvar y = 7;\rvar z = {};",
+      "wrongContent": [
+          "var figure = {",
+          "    this.id = 'circle'",
+          "    this.changeId = function ( newId ) {",
+          "         this.id = newId",
+          "    }",
+          "}"
+      ],
+      "rightContent": [
+          "var figure = {",
+          "    id: 'circle'",
+          "    changeId: function ( newId ) {",
+          "         this.id = newId",
+          "    }",
+          "}"
+      ],
       "contentCols": 50,
       "contentRows": 4,
       "balls": 3,
