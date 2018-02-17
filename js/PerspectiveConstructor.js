@@ -86,7 +86,7 @@ function CoursewarePerspectiveConstructor ( params ) {
 	
 	this.initialPosition = function (obj) {
 		obj.style.marginTop = Math.round(window.innerHeight*0.45) + 'px';
-		obj.style.marginleft = Math.round(window.innerWidth*0.45) + 'px';
+		obj.style.marginLeft = Math.round(window.innerWidth*0.45) + 'px';
 		obj.style.width = Math.round(window.innerWidth*0.1) + 'px';
 		obj.style.height = Math.round(window.innerHeight*0.1) + 'px';
 	};
