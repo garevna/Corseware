@@ -1,7 +1,7 @@
-// ================================== Courseware Constructor ==================================
+'use strict'
 
 function CoursewareConstructor () {
-	
+
 	this.init = function (coursewareSourceURL) {
 		this.ready = false
 		this.levels = []
@@ -12,22 +12,22 @@ function CoursewareConstructor () {
 		this.score = 0
 		this.maxScore = 0
 		this.nextLevelAvailiable = true
-		
+
 		this.livesPictureURL = undefined
 		this.gameOverPictureURL = undefined
 		this.successPictureURL = undefined
 		this.failurePictureURL = undefined
-		
+
 		this.livesPanel = document.createElement('aside')
 		this.livesPanel.className = "livesPanel"
 		document.body.appendChild(this.livesPanel)
-		
+
 		this.scorePanel = document.createElement('aside')
 		this.scorePanel.className = "scorePanel"
 		document.body.appendChild(this.scorePanel)
 		this.scorePanel.progressBar = document.createElement('progress')
 		this.scorePanel.appendChild(this.scorePanel.progressBar)
-		
+
 		this.mainScene = document.createElement('figure')
 		this.mainScene.className = "mainScene"
 		document.body.appendChild(this.mainScene)
@@ -36,7 +36,7 @@ function CoursewareConstructor () {
 		this.centralPicture = document.createElement('div')
 		this.centralPicture.className = "centralImage"
 		this.question = document.createElement('p')
-		
+
 		this.resizeMainScene = resizeMainScene.bind(this)
 		this.callback = coursewareCallback.bind(this)
 		this.createPanels = initPanels.bind(this)
@@ -50,13 +50,13 @@ function CoursewareConstructor () {
 		this.nextLevel = coursewareNextLevel.bind(this)
 		this.success = coursewareSuccess.bind(this)
 		this.getLevelType = corsewareLevelType.bind(this)
-		
+
 		loadData ( coursewareSourceURL, this.callback )
 	}
 	// ======================================================================================== loadData
 	function loadData ( sourceURL, callback ) {
 		try {
-			var coursewareWorker = new Worker( '/js/json_loader.js' )
+			var coursewareWorker = new Worker( 'json_loader.js' )
 			coursewareWorker.postMessage ( sourceURL )
 			coursewareWorker.addEventListener('message', function(e) {
 				var $data = e.data
@@ -67,7 +67,7 @@ function CoursewareConstructor () {
 			}, false)
 		}
 		catch (err) { alert("К сожалению, в Вашем браузере полная функциональность невозможна") }
-	};
+	}
 	// ======================================================================================== createPanels
 	function initPanels () {
 		for (var j = 0; j < this.lives; j++) {
@@ -82,16 +82,7 @@ function CoursewareConstructor () {
 	function createMainScene () {
 		this.mainScene.style.display = 'block'
 		this.mainScene.innerHTML = ''
-		// this.mainScene.style.backgroundSize = "20%"
-		this.resizeMainScene()
-	};
-	// =========================================================================================== resizeMainScene
-	function resizeMainScene () {
-		//this.mainScene.style.width = Math.round(window.innerWidth*0.7) + 'px'
-		//this.mainScene.style.height = Math.round(window.innerHeight*0.8) + 'px'
-		//this.mainScene.style.marginLeft = Math.round(window.innerWidth*0.2) + 'px'
-		//this.mainScene.style.marginTop = Math.round(window.innerHeight*0.1) + 'px'
-	};
+	}
 	// =========================================================================================== coursewareCallback
 	function coursewareCallback ( $data ) {
 		// this  ===== CoursewareConstructor
@@ -126,9 +117,9 @@ function CoursewareConstructor () {
 		this.levelNum++
 		if ( this.levelNum == this.levels.length-1 ) { this.finish() }
 		var levelData = this.levels[this.levelNum]
-		
+
 		this.createMainScene()
-		
+
 		this.mainScene.style.backgroundImage = 'url(' + levelData.centralPicture + ')'
 		this.question = document.createElement('p')
 		this.question.className = 'coursewareQuest'
@@ -146,7 +137,7 @@ function CoursewareConstructor () {
 				parentObject.gotoNextLevel = true
 			}
 		}
-		
+
 		if ( this.levelNum == this.levels.length ) { this.success(); this.nextLevelAvailiable = false }
 		else {
 			this.nextLevelAvailiable = true
@@ -225,22 +216,11 @@ function CoursewareConstructor () {
 			var etalon = rightAnswer.split('').map ( x => x.trim () ).join ( "" )
 			return testus === etalon
 		}
-		//inputElement.cols = levelData.contentCols
-		//inputElement.rows = levelData.contentRows
-		//inputElement.value = levelData.wrongContent
-		
-		//var cloneInputElement = document.createElement('textarea')
-		//cloneInputElement.className = "coursewareTextAreaElement"
-		//cloneInputElement.style.display = 'none'
-		//cloneInputElement.value = levelData.rightContent
-		//cloneInputElement.cols = levelData.contentCols
-		//cloneInputElement.rows = levelData.contentRows
-		//inputContainer.appendChild(cloneInputElement)
 		var btn = document.createElement('button')
 		btn.innerHTML = 'Готово'
 		btn.style.fontSize = "20px"
 		inputContainer.appendChild ( btn )
-		
+
 		btn.addEventListener ('click', function ( event ) {
 			var result = testAnswer ()
 			var scene = event.target.parentNode.parentNode
@@ -356,9 +336,10 @@ function CoursewareConstructor () {
 			this.mainScene.innerHTML += ' из ' + this.maxScore + ' возможных</h1>'
 			this.mainScene.innerHTML += '<h1>Осталось жизней: ' + this.lives
 			this.mainScene.innerHTML += ' из ' + this.maxLives + '</h1>'
-			
+
 			this.mainScene.appendChild ( this.buttonToNextLevel )
 		}
 		else this.nextLevelAvailiable = true
 	}
 }
+export default CoursewareConstructor
