@@ -1,0 +1,30 @@
+{
+  "name": "js-simulator",
+  "version": "1.0.0",
+  "description": "Simulator for my students learning JS",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "gsap": "^1.20.4",
+    "webpack": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garevna/js-simulator.git"
+  },
+  "keywords": [
+    "js",
+    "courseware",
+    "simulator",
+    "test"
+  ],
+  "author": "garevna <irina.h.fylyppova@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garevna/js-simulator/issues"
+  },
+  "homepage": "https://github.com/garevna/js-simulator#readme"
+}
