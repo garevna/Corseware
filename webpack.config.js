@@ -7,18 +7,19 @@ const webpack = require("webpack")
 
 module.exports = {
     mode: 'production',
-    entry: '/js/main.js',
+    entry: {
+      filename: 'js/main.js'
+    },
     output: {
-        filename: 'index.js',
-        path: path.resolve(__dirname, 'build')
+        filename: 'build/index.js'
     },
     module: {
       rules: [
         {
             test: /\.js$/,
             loader: 'babel-loader',
-            exclude: /node_modules/,
-            query: { presets: [ 'es2015' ] }
+            exclude: /node_modules//*,
+            query: { presets: [ 'es2015' ] }*/
         },
         {
           test: /\.css$/,
@@ -48,6 +49,12 @@ module.exports = {
       ]
     },
     resolve: {
-
+        alias: {
+            'js': path.join(__dirname, 'js'),
+            'css': path.join(__dirname, 'css'),
+            'img': path.join(__dirname, 'images'),
+            'json': path.join(__dirname, 'json'),
+            'build': path.join(__dirname, 'build')
+        }
     }
 }

@@ -4,8 +4,7 @@
   "description": "Simulator for my students learning JS",
   "dependencies": {
     "glob": "^7.1.2",
-    "gsap": "^1.20.4",
-    "webpack": "^4.6.0"
+    "gsap": "^1.20.4"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garevna/js-simulator.git"
+    "url": "https://github.com/garevna/js-simulator.git"
   },
   "keywords": [
     "js",
