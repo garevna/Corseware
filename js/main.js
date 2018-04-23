@@ -12,7 +12,7 @@ var sourceNum = location.hash.substr ( 1, location.hash.length )
 function loadQuizData ( sourceDataURL ) {
     return new Promise ( function ( resolve, reject ) {
       try {
-          var worker = new Worker( './js/json_loader.js' )
+          var worker = new Worker( 'js/json_loader.js' )
           worker.postMessage ( sourceDataURL )
           worker.addEventListener( 'message', function ( event ) {
               if ( event.data ) {

@@ -112,7 +112,7 @@ PerspectiveConstructor.prototype.init = function ( parentElement ) {
 		this.parentElement.appendChild ( this.personage )
 		this.personage.id = "perspectivePersonage"
 		this.personage.className = "personage"
-		this.personage.style.backgroundImage = 'url(../images/astronaut.gif)'
+		this.personage.style.backgroundImage = 'url(images/astronaut.gif)'
 		this.parentElement.onmousemove = function ( event ) {
 				var elem = document.getElementById ( "perspectivePersonage" )
 				elem.style.left = event.clientX + "px"

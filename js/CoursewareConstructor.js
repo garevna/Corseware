@@ -4,8 +4,8 @@ function QuizConstructor ( parentElement ) {
 		this.parentElement = parentElement || document.body
 		this.root = document.querySelector(':root')
 		this.createMainScene ()
-		this.setButtonToNextLevelPicture ( "../images/next-level.png" )
-		this.setButtonTestAnswerPicture ( "../images/test-answer.png" )
+		this.setButtonToNextLevelPicture ( "images/next-level.png" )
+		this.setButtonTestAnswerPicture ( "images/test-answer.png" )
 }
 QuizConstructor.prototype.setLifePicture = function ( val ) {
 		this.root.style.setProperty ( '--quiz-life-picture', "url(" + val + ")" )
@@ -86,8 +86,8 @@ QuizConstructor.prototype.createMainScene = function () {
 		this.testResultButton.answerElem = this.inputElement
 		// this.testResultButton.rightAnswer  should be defined
 		// this.testResultButton.levelBalls   should be defined
-		this.testResultButton.rightAnswerPicture = "url(../images/smile-01.gif)"           // default value
-		this.testResultButton.wrongAnswerPicture = "url(../images/simpson-and-ball.gif)"   // default value
+		this.testResultButton.rightAnswerPicture = "url(images/smile-01.gif)"           // default value
+		this.testResultButton.wrongAnswerPicture = "url(images/simpson-and-ball.gif)"   // default value
 		this.testResultButton.onclick = function ( event ) {
 				var answer = event.target.answerElem.tagName === "PRE" ?
 							event.target.answerElem.innerHTML.split('\n').join("").split("&lt;").join("<").split("&amp;").join("&").split(" ").join("") :
