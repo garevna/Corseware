@@ -90,8 +90,10 @@ QuizConstructor.prototype.createMainScene = function () {
 		this.testResultButton.wrongAnswerPicture = "url(images/simpson-and-ball.gif)"   // default value
 		this.testResultButton.onclick = function ( event ) {
 				var answer = event.target.answerElem.tagName === "PRE" ?
-							event.target.answerElem.innerHTML.split('\n').join("").split("&lt;").join("<").split("&amp;").join("&").split(" ").join("") :
+							event.target.answerElem.innerHTML.split('<br>').join("").split('\n').join("").split("&lt;").join("<").split("&amp;").join("&").split(" ").join("") :
 							event.target.answerElem.value
+				console.log (answer)
+				console.log (event.target.rightAnswer)
 				if ( answer === event.target.rightAnswer ) {
 							event.target.parentObject.setCentralPicture ( event.target.rightAnswerPicture )
 							event.target.scorePanel.progressBar.value += event.target.levelBalls

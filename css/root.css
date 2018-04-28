@@ -54,3 +54,6 @@
     position: absolute;
     left: -999em;
 }
+* {
+    		font-family: 'Jura', 'Didact Gothic', 'Roboto', sans-serif;
+}

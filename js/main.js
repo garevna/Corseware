@@ -1,7 +1,9 @@
 ﻿'use strict'
 
+import fonts from '../css/googleFonts.css'
+import googleFonts from '../css/fonts.css'
+import root from '../css/root.css'
 import { TweenMax, Power2, TimelineLite } from "gsap"
-
 import PerspectiveConstructor from 'js/PerspectiveConstructor.js'
 import QuizConstructor from 'js/CoursewareConstructor.js'
 import perspective_css from 'css/perspective.css'
