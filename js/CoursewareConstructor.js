@@ -92,8 +92,6 @@ QuizConstructor.prototype.createMainScene = function () {
 				var answer = event.target.answerElem.tagName === "PRE" ?
 							event.target.answerElem.innerHTML.split('<br>').join("").split('\n').join("").split("&lt;").join("<").split("&amp;").join("&").split(" ").join("") :
 							event.target.answerElem.value
-				console.log (answer)
-				console.log (event.target.rightAnswer)
 				if ( answer === event.target.rightAnswer ) {
 							event.target.parentObject.setCentralPicture ( event.target.rightAnswerPicture )
 							event.target.scorePanel.progressBar.value += event.target.levelBalls
@@ -203,7 +201,7 @@ QuizConstructor.prototype.constructChoiceLevel = function ( levelData ) {
 		this.resizeChoiceLevel ()
 }
 QuizConstructor.prototype.resizeChoiceLevel = function () {
-		var center = { top: Math.round ( window.innerHeight/2 ), left: Math.round ( window.innerWidth/2 ) }
+		var center = { top: Math.round ( window.innerHeight/2 ) - 30, left: Math.round ( window.innerWidth/2 ) }
 		var radius = Math.round ( Math.min( window.innerHeight, window.innerWidth ) * 0.3 )
 		var delta = Math.round( radius/Math.sqrt(2) )
 		var points = [

@@ -47,7 +47,7 @@
 	}
 	.coursewareQuest {
   		position:absolute;
-  		top:5%;
+  		top:2%;
   		left:5%;
 	}
 	.coursewareInputElement {
@@ -62,7 +62,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 100%;
+      left: 60%;
       height: 70px;
       text-align:right;
   }
@@ -99,9 +99,8 @@
       font-weight:bold;
       color:white;
       text-shadow:0px 0px 4px rgba(0,0,0,0.8);
-			font-family: 'Jura', 'Didact Gothic', 'Roboto', sans-serif;
   }
-    .centralImage {
+  .centralImage {
   	   position:absolute;
   	   width:20%;
   	   height:20%;
@@ -174,6 +173,12 @@
 	   bottom:0;
 	   width:300px;
    }
+	 pre {
+		 font-family: monospace;
+		 font-size: 14px;
+		 line-height: 20px;
+		 overflow: auto;
+	 }
    .scorePanel > progress { width:200px; height:10px; }
    .scorePanel:before { content: 'Score: '; }
    .livesPanel > div { width:40px; height:40px; background-size:contain; background-repeat:no-repeat; background-position:center center; display:inline-block; }
@@ -199,11 +204,18 @@
    }
    @media screen and (max-width: 480px) {
 	   .livesPanel { width:48px; padding:2px; }
+		 * { font-size: 12px; }
+		 nav { left: 20%; height: 50px; }
+		 .buttonToNextLevel, .testResultButton { width: 40px; height: 40px; }
    }
    @media screen and (max-height: 480px) {
 	   .mainScene { top:0; left:10%; }
 	   .livesPanel { width:70px; padding:2px; }
 	   .livesPanel div { width:30px; height:30px; }
+		 .coursewareQuest {top:0; }
+		 nav { left: 20%; height: 50px; }
+		 * { font-size: 12px; }
+		 .buttonToNextLevel, .testResultButton { width: 40px; height: 40px; }
    }
    @media screen and (max-width: 420px)  {
 	   body { font-size:10px; }
